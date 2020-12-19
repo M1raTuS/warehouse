@@ -10,6 +10,7 @@
         <DataGrid HorizontalAlignment="Left" Height="369" VerticalAlignment="Top" Width="436"/>
         <Button x:Name="btn1" Content="Add" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="btn2" Content="Delete" HorizontalAlignment="Left" Margin="361,390,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn3" Content="TestBtn" HorizontalAlignment="Left" Margin="536,76,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
