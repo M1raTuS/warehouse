@@ -7,11 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="369" VerticalAlignment="Top" Width="436"/>
-        <Button x:Name="btn1" Content="Add" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn2" Content="Delete" HorizontalAlignment="Left" Margin="361,390,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn3" Content="TestBtn" HorizontalAlignment="Left" Margin="536,76,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn4" Content="OneMoreBtn" HorizontalAlignment="Left" Margin="536,117,0,0" VerticalAlignment="Top" Width="75"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid HorizontalAlignment="Left" Width="482" AutoGenerateColumns="False" x:Name="ProductsGrid" Margin="0,0,0,-0.333" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Тип" Width="80"/>
+                <DataGridTextColumn Binding="{Binding InvoiceNumber}" Header="Первый Номер" Width="100"/>
+                <DataGridTextColumn Binding="{Binding ProjectNumber}" Header="Второй Номер" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Amount}" Header="Количество" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel HorizontalAlignment="Center"  Orientation="Vertical" Margin="541,10,80.333,0" Width="172" Height="401" VerticalAlignment="Center">
+            <Label Margin="50,100,60,0" />
+            <Label Content="шт." Margin="120,-20,0,0" />
+            <TextBox x:Name="tb2" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="50,20,50,0"/>
+            <Button x:Name="AddButton" Content="Add" Click="AddButton_Click" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="DeleteButton" Content="Delete" Click="DeleteButton_Click" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.524,-7.026"/>
+        </StackPanel>
+        
     </Grid>
+    
 </Window>
